@@ -33,10 +33,25 @@ public class Cafe extends Building{
     }
 
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups){
-        this.nCoffeeOunces = 100;
-        this.nSugarPackets = 100;
-        this.nCreams = 100;
-        this.nCups = 100; 
+        this.nCoffeeOunces = nCoffeeOunces + 100;
+        this.nSugarPackets = nSugarPackets + 100;
+        this.nCreams = nCreams + 100;
+        this.nCups = nCups + 100; 
+    }
+
+    private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups, boolean flavorShot) { 
+        this.nCoffeeOunces = nCoffeeOunces + 100;
+        this.nSugarPackets = nSugarPackets + 100;
+        this.nCreams = nCreams + 100;
+        this.nCups = nCups + 100;
+        if (flavorShot = true) {
+            System.out.println("The cafe has flavor shots.");
+        }
+        else {
+            System.out.println("The cafe does not have flavor shots. Restocking...");
+            flavorShot = true;
+            System.out.println("Restocked!");
+        }
     }
     
     //public static void main(String[] args) {
